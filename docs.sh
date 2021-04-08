@@ -6,7 +6,7 @@ NOW=$(date)
 
 # if we don't have any HTML files, don't do anything
 shopt -s nullglob
-for f in $SRC_DIR/*.html
+for f in $SRC_DIR/index.html
 do
     echo Processing $f
     DEST_FILE=$DEST_DIR/$(basename $f)
