@@ -27,6 +27,7 @@ steps:
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
     git config --global user.email "la.fowks@gmail.com"
     git config --global user.name "lfowks"
+    git add .
     git commit -m "This is a commit from Azure DevOps [skip ci]"
     git remote set-url --push origin git@github.com:lfowks/mati-prod.git
     git push origin HEAD:master
