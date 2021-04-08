@@ -25,9 +25,9 @@ steps:
     mkdir ~/.ssh && mv $DOWNLOADSECUREFILE_SECUREFILEPATH ~/.ssh/id_rsa
     chmod 700 ~/.ssh && chmod 600 ~/.ssh/id_rsa
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+    git config --global user.email "la.fowks@gmail.com"
+    git config --global user.name "lfowks"
+    git commit -m "This is a commit from Azure DevOps [skip ci]"
     git remote set-url --push origin git@github.com:lfowks/mati-prod.git
     git push origin HEAD:master
   displayName: 'Publish GitHub Pages'
-  condition: |
-    and(not(eq(variables['Build.Reason'], 'PullRequest')),
-        eq(variables['Build.SourceBranch'], 'refs/heads/master'))
