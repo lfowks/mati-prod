@@ -17,7 +17,7 @@ steps:
 - task: PublishBuildArtifacts@1
 
 - script: |
-    ./docs.sh
+    ./
     git config --local user.name "Azure Pipelines"
     git config --local user.email "fowks@hotmail.com"
     git add .
